@@ -1,0 +1,5 @@
+setup.py
+hate_speech_classification.egg-info/PKG-INFO
+hate_speech_classification.egg-info/SOURCES.txt
+hate_speech_classification.egg-info/dependency_links.txt
+hate_speech_classification.egg-info/top_level.txt
