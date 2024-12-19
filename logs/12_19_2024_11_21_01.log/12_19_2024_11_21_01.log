@@ -1,0 +1,16 @@
+[ 2024-12-19 11:21:01,077] root - INFO - Entered the run_pipeline method of TrainPipeline class
+[ 2024-12-19 11:21:01,077] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-12-19 11:21:01,077] root - INFO - Getting the data from GCLoud Storage bucket
+[ 2024-12-19 11:21:01,077] root - INFO - Entered the initiate_data_ingestion method of Data ingestion class
+[ 2024-12-19 11:21:01,077] root - INFO - Entered the get_data_from_gcloud method of Data ingestion class
+[ 2024-12-19 11:21:04,186] root - INFO - Exited the get_data_from_gcloud method of Data ingestion class
+[ 2024-12-19 11:21:04,188] root - INFO - Fetched the data from gcloud bucket
+[ 2024-12-19 11:21:04,188] root - INFO - Entered the unzip_and_clean method of Data ingestion class
+[ 2024-12-19 11:21:04,188] root - INFO - Using ZIP file path: C:\Users\ruguh\OneDrive\Desktop\Projects\hatespeechclassification\artifacts\12_19_2024_11_21_01\DataIngestionArtifacts\dataset.zip
+[ 2024-12-19 11:21:04,224] root - INFO - Exited the unzip_and_clean method of Data ingestion class
+[ 2024-12-19 11:21:04,224] root - INFO - Unzipped file and split into train and valid
+[ 2024-12-19 11:21:04,224] root - INFO - Exited the initiate_data_ingestion method of Data ingestion class
+[ 2024-12-19 11:21:04,224] root - INFO - Data ingestion artifact: DataIngestionArtifacts(imbalance_data_file_path='C:\\Users\\ruguh\\OneDrive\\Desktop\\Projects\\hatespeechclassification\\artifacts\\12_19_2024_11_21_01\\DataIngestionArtifacts\\imbalanced_data.csv', raw_data_file_path='C:\\Users\\ruguh\\OneDrive\\Desktop\\Projects\\hatespeechclassification\\artifacts\\12_19_2024_11_21_01\\DataIngestionArtifacts\\raw_data.csv')
+[ 2024-12-19 11:21:04,224] root - INFO - Got the train and valid from GCLoud Storage
+[ 2024-12-19 11:21:04,224] root - INFO - Exited the start_data_ingestion method of TrainPipeline class
+[ 2024-12-19 11:21:04,225] root - INFO - Entered the run_pipeline method of TrainPipeline class

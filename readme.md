@@ -1,6 +1,6 @@
 
 
-## Project Workflow
+## Project Workflow (data ingestion)
 
 - constants
 - config_entity
@@ -20,4 +20,8 @@ conda activate hate
 
 ```bash
 pip install -r requirements.txt
+```
+
+```bash
+pip app.py
 ```
