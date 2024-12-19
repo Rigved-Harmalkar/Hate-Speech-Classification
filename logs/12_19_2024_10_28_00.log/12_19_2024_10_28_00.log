@@ -1,0 +1,8 @@
+[ 2024-12-19 10:28:00,719] root - INFO - Entered the run_pipeline method of TrainPipeline class
+[ 2024-12-19 10:28:00,719] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2024-12-19 10:28:00,719] root - INFO - Getting the data from GCLoud Storage bucket
+[ 2024-12-19 10:28:00,719] root - INFO - Entered the initiate_data_ingestion method of Data ingestion class
+[ 2024-12-19 10:28:00,719] root - INFO - Entered the get_data_from_gcloud method of Data ingestion class
+[ 2024-12-19 10:28:06,284] root - INFO - Exited the get_data_from_gcloud method of Data ingestion class
+[ 2024-12-19 10:28:06,284] root - INFO - Fetched the data from gcloud bucket
+[ 2024-12-19 10:28:06,284] root - INFO - Entered the unzip_and_clean method of Data ingestion class
