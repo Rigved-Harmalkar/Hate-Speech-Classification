@@ -4,6 +4,8 @@ import os
 from from_root import from_root
 from datetime import datetime
 
+# Download requirements.txt and then start with this. I struggled with from_root but no big deal.
+
 LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 logs_path = os.path.join(os.getcwd(),"logs",LOG_FILE)
 

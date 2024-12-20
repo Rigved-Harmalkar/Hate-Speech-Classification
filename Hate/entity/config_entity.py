@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from Hate.constants import *
 import os
 
+# Paths to the files.
 @dataclass
 class DataIngestionConfig:
     def __init__(self):

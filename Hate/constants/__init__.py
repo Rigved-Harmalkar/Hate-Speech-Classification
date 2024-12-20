@@ -2,6 +2,8 @@ import os
 
 from datetime import datetime
 
+# Constants are something that never change, hence a single file to store all of them and you don't have to search it in a code snippet.
+
 # Common constants
 TIMESTAMP: str = datetime.now().strftime("%m_%d_%Y_%H_%M_%S")
 ARTIFACTS_DIR = os.path.join("artifacts", TIMESTAMP)

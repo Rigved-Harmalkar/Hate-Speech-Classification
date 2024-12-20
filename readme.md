@@ -10,12 +10,12 @@
 - app.py
 
 ```bash
-conda create -n hate python=3.8 -y
+conda create -n nlp python=3.8 -y
 
 ```
 
 ```bash
-conda activate hate
+conda activate nlp
 ```
 
 ```bash

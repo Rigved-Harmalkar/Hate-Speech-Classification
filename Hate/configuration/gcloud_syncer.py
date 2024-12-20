@@ -1,6 +1,6 @@
 import os
 
-
+# Download Gcloud SDK and initialize it, class to get folder to the local and add folder to the GCP
 class GCloudSync:
 
     def sync_folder_to_gcloud(self, gcp_bucket_url, filepath, filename):

@@ -8,7 +8,7 @@ from Hate.entity.artifact_entity import (DataIngestionArtifacts)
 
 
 
-
+# Class to ingest and train the model with the data from the GCP.
 
 class TrainPipeline:
     def __init__(self):

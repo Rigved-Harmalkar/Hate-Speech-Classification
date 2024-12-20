@@ -8,11 +8,13 @@ from Hate.entity.config_entity import (DataIngestionConfig)
 from Hate.entity.artifact_entity import (DataIngestionArtifacts)
 
 
+# Class to ingest data from the GCP
 class DataIngestion:
     def __init__(self, data_ingestion_config : DataIngestionConfig):
         self.data_ingestion_config = data_ingestion_config
         self.gcloud = GCloudSync()
-        
+     
+    # Getter Function    
     def get_data_from_gcloud(self) -> None:
         try:
             logging.info("Entered the get_data_from_gcloud method of Data ingestion class")
@@ -28,7 +30,7 @@ class DataIngestion:
         except Exception as e:
             raise CustomException(e, sys) from e
         
-    
+    # Since the data is in a zip file, a function for unzipping the zip file.
     def unzip_and_clean(self):
         logging.info("Entered the unzip_and_clean method of Data ingestion class")
         
@@ -63,7 +65,7 @@ class DataIngestion:
             print("Not working")
             raise CustomException(e, sys) from e
         
-    
+    # Start the data ingestion function
     def initiate_data_ingestion(self) -> DataIngestionArtifacts:
         logging.info("Entered the initiate_data_ingestion method of Data ingestion class")
 
