@@ -74,7 +74,8 @@ class DataIngestion:
             logging.info("Fetched the data from gcloud bucket")
             imbalance_data_file_path, raw_data_file_path = self.unzip_and_clean()
             logging.info("Unzipped file and split into train and valid")
-
+            print(raw_data_file_path)
+            print(imbalance_data_file_path)
             data_ingestion_artifacts = DataIngestionArtifacts(
                 imbalance_data_file_path= imbalance_data_file_path,
                 raw_data_file_path = raw_data_file_path
