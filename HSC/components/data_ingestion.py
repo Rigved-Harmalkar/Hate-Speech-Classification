@@ -1,11 +1,11 @@
 import os
 import sys
 from zipfile import ZipFile
-from Hate.logger import logging
-from Hate.exception import CustomException
-from Hate.configuration.gcloud_syncer import GCloudSync
-from Hate.entity.config_entity import (DataIngestionConfig)
-from Hate.entity.artifact_entity import (DataIngestionArtifacts)
+from HSC.logger import logging
+from HSC.exception import CustomException
+from HSC.configuration.gcloud_syncer import GCloudSync
+from HSC.entity.config_entity import (DataIngestionConfig)
+from HSC.entity.artifact_entity import (DataIngestionArtifacts)
 
 
 class DataIngestion:
@@ -14,6 +14,10 @@ class DataIngestion:
         self.gcloud = GCloudSync()
         
     def get_data_from_gcloud(self) -> None:
+        """
+        Getting data from the GCP buckets.
+        
+        """
         try:
             logging.info("Entered the get_data_from_gcloud method of Data ingestion class")
             os.makedirs(self.data_ingestion_config.DATA_INGESTION_ARTIFACTS_DIR, exist_ok=True)

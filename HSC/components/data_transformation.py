@@ -7,10 +7,10 @@ import nltk
 from nltk.corpus import stopwords
 nltk.download('stopwords')
 from sklearn.model_selection import train_test_split
-from Hate.logger import logging 
-from Hate.exception import CustomException
-from Hate.entity.config_entity import DataTransformationConfig
-from Hate.entity.artifact_entity import DataIngestionArtifacts, DataTransformationArtifacts
+from HSC.logger import logging 
+from HSC.exception import CustomException
+from HSC.entity.config_entity import DataTransformationConfig
+from HSC.entity.artifact_entity import DataIngestionArtifacts, DataTransformationArtifacts
 
 
 class DataTransformation:
@@ -21,6 +21,11 @@ class DataTransformation:
         
         
     def imbalance_data_cleaning(self):
+        
+        """
+        Cleaning the imbalanced csv with predefined constants from the constant -> __init__.py
+        
+        """
 
         try:
             logging.info("Entered into the imbalance_data_cleaning function")
@@ -34,6 +39,11 @@ class DataTransformation:
         
         
     def raw_data_cleaning(self):
+        """
+        Function for cleaning the raw data csv with predefined constants from the constant -> __init__.py
+        
+        """
+        
         try:
             logging.info("Entered into the raw_data_cleaning function")
             raw_data = pd.read_csv(self.data_ingestion_artifacts.raw_data_file_path)
@@ -58,6 +68,10 @@ class DataTransformation:
         
         
     def concat_dataframe(self):
+        """
+        Function to Concate the cleaned raw and imbalanced csv to balance the imbalanced dataset.
+        
+        """
 
         try:
             logging.info("Entered into the concat_dataframe function")
@@ -73,6 +87,11 @@ class DataTransformation:
         
         
     def concat_data_cleaning(self, words):
+        
+        """
+        Function to apply preprocessing steps to the data.
+        
+        """
 
         try:
             logging.info("Entered into the concat_data_cleaning function")
@@ -98,6 +117,10 @@ class DataTransformation:
         
         
     def initiate_data_transformation(self) -> DataTransformationArtifacts:
+        """
+        Function to start the data transformation.
+        
+        """
         try:
             logging.info("Entered the initiate_data_transformation method of Data transformation class")
             self.imbalance_data_cleaning()

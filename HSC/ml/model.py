@@ -1,10 +1,10 @@
 # Creating model architecture.
-from Hate.entity.config_entity import ModelTrainerConfig
+from HSC.entity.config_entity import ModelTrainerConfig
 from keras.models import Sequential
 from keras.optimizers import RMSprop
 from keras.callbacks import EarlyStopping, ModelCheckpoint
 from keras.layers import LSTM,Activation,Dense,Dropout,Input,Embedding,SpatialDropout1D
-from Hate.constants import *
+from HSC.constants import *
 
 class ModelArchitecture:
 

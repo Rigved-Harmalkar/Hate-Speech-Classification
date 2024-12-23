@@ -2,15 +2,15 @@ import os
 import sys
 import pickle
 import pandas as pd
-from Hate.logger import logging
-from Hate.constants import *
-from Hate.exception import CustomException
+from HSC.logger import logging
+from HSC.constants import *
+from HSC.exception import CustomException
 from sklearn.model_selection import train_test_split
 from keras.preprocessing.text import Tokenizer
 from keras.utils import pad_sequences
-from Hate.entity.config_entity import ModelTrainerConfig
-from Hate.entity.artifact_entity import ModelTrainerArtifacts,DataTransformationArtifacts
-from Hate.ml.model import ModelArchitecture
+from HSC.entity.config_entity import ModelTrainerConfig
+from HSC.entity.artifact_entity import ModelTrainerArtifacts,DataTransformationArtifacts
+from HSC.ml.model import ModelArchitecture
 
 class ModelTrainer:
     def __init__(self,data_transformation_artifacts: DataTransformationArtifacts,
