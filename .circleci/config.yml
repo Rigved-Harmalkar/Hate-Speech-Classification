@@ -9,7 +9,6 @@ jobs:
     resource_class: medium
     steps:
       - setup_remote_docker:
-          version: 20.10.14
           docker_layer_caching: true
 
       - aws-ecr/build-and-push-image:
@@ -34,13 +33,10 @@ jobs:
           name: auth to aws ecr
           command: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 761018889994.dkr.ecr.us-east-1.amazonaws.com
           
-          
-
       - run:
           name: pull image from private repository
           command: docker pull 761018889994.dkr.ecr.us-east-1.amazonaws.com/hscproj:latest
           
-      
       - run:
           name: run image
           command: docker run -d -p 8080:8080 761018889994.dkr.ecr.us-east-1.amazonaws.com/hscproj:latest
@@ -51,6 +47,3 @@ workflows:
       - continuous-delivery:
           requires:
           - continuous-integration
-
-
-      
