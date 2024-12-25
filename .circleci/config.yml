@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
-  aws-ecr: circleci/aws-ecr@8.2.1
-  aws-cli: circleci/aws-cli@3.1.4
+  aws-ecr: circleci/aws-ecr@9.3.7
+  aws-cli: circleci/aws-cli@5.1.2
 jobs:
   continuous-integration:
     docker:
@@ -25,7 +25,7 @@ jobs:
 
   continuous-delivery:
     machine: true
-    resource_class: prorig/hscrunner
+    resource_class: prorig/hscprojrunner
     steps:
       - aws-cli/setup
 
@@ -35,11 +35,11 @@ jobs:
           
       - run:
           name: pull image from private repository
-          command: docker pull 761018889994.dkr.ecr.us-east-1.amazonaws.com/hscproj:latest
+          command: docker pull 761018889994.dkr.ecr.us-east-1.amazonaws.com/demo:latest
           
       - run:
           name: run image
-          command: docker run -d -p 8080:8080 761018889994.dkr.ecr.us-east-1.amazonaws.com/hscproj:latest
+          command: docker run -d -p 8080:8080 761018889994.dkr.ecr.us-east-1.amazonaws.com/demo:latest
 workflows:
   CICD:
     jobs:

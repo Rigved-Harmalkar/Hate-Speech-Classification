@@ -43,7 +43,7 @@ sudo nano /etc/opt/circleci/launch-agent-config.yaml
 
 # Add API in the file and change permissions
 api:
-  auth_token: 2c2ef67ac28b436706f0a542f794fce9592b2dc243b3eb9eeabbeef4b247a6a0aa425ef3d27c2064
+  auth_token: ab9c1d4bda260fd18e82a5767d49b6420520c4fc578dd86853232ecfe5c059ff26265323dbc9dba8
 
 
 runner:
@@ -119,3 +119,5 @@ AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY
 AWS_REGION
 AWS_ECR_REGISTRY_ID
+
+#pope
