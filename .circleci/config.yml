@@ -25,7 +25,7 @@ jobs:
 
   continuous-delivery:
     machine: true
-    resource_class: prorig/hscprojrunner
+    resource_class: prorig/haterunner
     steps:
       - aws-cli/setup
 
